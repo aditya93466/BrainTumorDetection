@@ -1,3 +1,26 @@
+import subprocess
+import sys
+
+# Function to install packages
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+Install required packages
+try:
+    import tensorflow as tf
+except ImportError:
+    install("tensorflow")
+
+try:
+    from PIL import Image
+except ImportError:
+    install("Pillow")
+
+try:
+    import streamlit as st
+except ImportError:
+    install("streamlit")
+
 import streamlit as st
 import numpy as np
 import tensorflow as tf
