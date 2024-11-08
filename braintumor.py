@@ -8,7 +8,7 @@ from keras.preprocessing import image
 # @st.cacheresource  # Caches the model to improve performance
 def loadbraintumormodel():
     # Load model architecture from JSON
-    with open('resnet-50-MRI.json', 'r') as json_file:
+    with open('./resnet-50-MRI.json', 'r') as json_file:
         json_savedModel = json_file.read()
     model = tf.keras.models.model_from_json(json_savedModel)
 
