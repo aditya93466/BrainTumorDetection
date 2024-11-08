@@ -5,7 +5,7 @@ import sys
 def install(package):
     subprocess.check_call([sys.executable, "-m", "pip", "install", package])
 
-Install required packages
+# Install required packages
 try:
     import tensorflow as tf
 except ImportError:
